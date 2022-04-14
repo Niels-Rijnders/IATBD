@@ -46,13 +46,13 @@
             </div>
 
             <div class="mt-4">
-                <x-label for="age" :value="__('age')" />
+                <x-label for="age" :value="__('Age')" />
                 <input id="age" class="block mt-1 w-full" name="age" :value="old('role')" type="number" required/>
             </div>
 
             <!-- Role -->
             <div class="mt-4">
-                <x-label for="role" :value="__('role')" />
+                <x-label for="role" :value="__('Role')" />
                 <select id="role" class="block mt-1 w-full" name="role" :value="old('role')" required>
                     <option value=Eigenaar> Eigenaar </option>
                     <option value=Oppasser> Oppasser </option>
