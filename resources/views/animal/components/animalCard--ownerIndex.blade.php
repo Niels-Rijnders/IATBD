@@ -8,8 +8,8 @@
             </figure>            
 
             <section class="gridCard__buttonSection gridCard__buttonSection--twoButtons u-display-block">
-                <button class="animalCard__button " onclick="window.location.href='/animal/{{$animal->id}}'">Meer over {{$animal->name}}</button>
-                <button class="animalCard__button " onclick="window.location.href='/application/{{$animal->id}}'">Aanvragen bekijken</button>
+                <button class="animalCard__button animalCard__button__aanvraag" onclick="window.location.href='/sushi/{{$animal->id}}'">Meer over {{$animal->name}}</button>
+                <button class="animalCard__button animalCard__button__aanvraag" onclick="window.location.href='/application/{{$animal->id}}'">Aanvragen bekijken</button>
             </section>
         
             

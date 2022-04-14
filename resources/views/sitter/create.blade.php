@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-<button class="animalCard__button" onclick="window.location.href='/'">  terug  </button>
-    <article class="create-form a-popup">
+    <article class="create-form create-form__sitter a-popup">
+        <button class="animalCard__button animalCard__button__sitter" onclick="window.location.href='/'">  Terug  </button>
         <form class="create-form__form" action="/application" method='POST'>
             @csrf
 
@@ -19,10 +19,10 @@
                 </select>
             </section>
 
-
+            <br>
             <p class="create-form__text"> Door op de verzend knop te drukken bevestig je dat je op het dier zal gaan passen.</p>
             <section class="create-form__section">
-                <button class="create-form__button application__button" type="submit">Verzend</button>
+                <button class="animalCard__button" type="submit">Verzend</button>
             </section>
         </form>
     </article>

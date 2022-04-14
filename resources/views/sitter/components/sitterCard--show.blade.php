@@ -10,6 +10,7 @@
                 {{$sitters->description}}
             </p>
         </section>
+        <br><br>
         <section class="showCard__reviews">
             <table class="reviewTable">
                 <tr class="reviewTable__row">

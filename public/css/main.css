@@ -12,7 +12,7 @@ html{
 body{
     font-size: 1.8rem;
     padding: 2rem;
-    background: #222831;
+    background: #3f0162;
     font-family: sans-serif;
 }
 
@@ -22,6 +22,7 @@ body{
     margin: 0 auto;
     box-shadow: 0 0.5rem 2rem black;
     position: relative;
+    border-radius: 25px;
 }
 
 @media(max-width: 37.5rem){
@@ -50,30 +51,34 @@ body{
 .animalCard__figure{
     width: 100%;
     height: 60%;
+    border-radius: 25px;
 }
 
 .animalCard__image{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:scale-down;
+    border-radius: 25px;
 }
 
 .userCard__image{
-    width: 40%;
+    width: 100%;
     height: 40%;
     object-fit: cover;
+    border-radius: 25px;
+    align-items: center;
 }
 
 .animalCard__text{
     padding-left: 2rem;
     color: #eeeeee;
-    height: 20%;
+    height: 10%;
     display: flex;
     align-items: center;
 }
 
 .animalCard__btnSection{
-    height: 20%;
+    height: 30%;
     padding-left: 2rem;
 }
 
@@ -82,15 +87,36 @@ body{
     width: 25rem;
     height: 6rem;
     box-sizing: border-box;
-    background: #07689f;
+    background: #6930C3;
     border: none;
     color: #eeeeee;
-    box-shadow: 0 0 5rem rgba(7, 104, 159, 0.7);
+    box-shadow: 0 0 5rem rgba(125, 6, 181, 0.7);
     transition: 0.2s all;
     margin-top: 1rem;
     margin-bottom: 2rem;
     margin-left: 1rem;
     text-align: center;
+    border-radius: 25px;
+}
+
+.animalCard__button__sitter{
+    margin-left: 2rem;
+}
+
+.animalCard__button__aanvraag{
+    width: 15rem;
+    background: #6930C3;
+    border-color: #3f0162;
+    border-style: solid;
+    border-width: 0.5rem;
+}
+
+.user__button{
+    width: 25rem;
+    background: #6930C3;
+    border-color: #3f0162;
+    border-style: solid;
+    border-width: 0.5rem;
 }
 
 @media(max-width: 37.5rem){
@@ -107,7 +133,7 @@ body{
 
 .animalCard__button:hover{
     cursor: pointer;
-    box-shadow: 0 0 5rem rgba(7, 104, 159, 1);
+    box-shadow: 0 0 5rem rgb(159, 4, 202);
 }
 
 .gridCard{
@@ -116,6 +142,8 @@ body{
     height: 50rem;
     box-shadow: 0 0.5rem 2rem black;
     position: relative;
+    background: #6930C3;
+    border-radius: 25px;
 }
 
 @media(max-width: 56.25rem){
@@ -150,8 +178,9 @@ body{
 }
 
 .gridCard__heading{
-    padding-left: 2rem;
     color: #eeeeee;
+    text-align: center;
+    padding-top: 3.5rem;
 }
 
 .gridCard__figure{
@@ -208,24 +237,67 @@ body{
     background: #0c056d;
 }
 
+.showCard{
+    width: 50vw;
+    height: 90vh;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 2rem black;
+    position: relative;
+    border-radius: 25px;
+}
+
+.showCard__header{
+    align-self: center;
+}
+
+.knop1 { grid-area: knop1; }
+.naam { grid-area: naam; }
+.soort { grid-area: soort; }
+.ras { grid-area: ras; }
+.leeftijd { grid-area: leeftijd; }
+.description { grid-area: description; }
+.afbeelding { grid-area: afbeelding; }
+.knop2 { grid-area: knop2; }
+.leeg  {grid-area: leeg; }
+
 .create-form{
     width: 40%;
     margin: 0 auto;
     box-shadow: 0 0.5rem 2rem black;
-    height: 70vh;
-    display: flex;
+    height: 170vh;
+    align-items: center;
     color: #eeeeee;
+    border-radius: 25px;
+    display: grid;
+    grid-template-areas:
+    'knop1 knop1'
+    'naam soort'
+    'ras leeftijd'
+    'description afbeelding'
+    'knop2 leeg';
+}
+
+.create-form__sitter{
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 2rem black;
+    height: 70vh;
+    align-items: center;
+    color: #eeeeee;
+    border-radius: 25px;
+    display:block;
 }
 
 .create-form__form{
     width: 90%;
-    margin: 0 auto;
+    margin: auto auto;
 }
 
 .create-form__section{
     margin-top: 4rem;
     font-size: 140%;
     width: 100%;
+    align-self: center;
 }
 
 .create-form__input{
@@ -286,7 +358,6 @@ body{
 }
 
 .u-flex-v-center{
-    display: flex;
     align-items: center;
 }
 
