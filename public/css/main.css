@@ -205,6 +205,10 @@ body{
     color: #eeeeee;
 }
 
+.role{
+    display: none;
+}
+
 
 /* style for kind-of-animal */
 .gridCard::after{

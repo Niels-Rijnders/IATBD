@@ -10,7 +10,8 @@ class AnimalController extends Controller
 {
     public function index(){
         return view('animal.index',[
-            'animal' => \App\Models\Animal::all()
+            'animal' => \App\Models\Animal::all(),
+            'role' => \App\Models\User::all()->where('id', Auth::id())->first()->role,
         ]);
     }
     
@@ -18,6 +19,7 @@ class AnimalController extends Controller
 
         return view('animal.show', [
             'animal' => \App\Models\Animal::find($id),
+            'role' => \App\Models\User::all()->where('id', Auth::id())->first()->role,
         ]);
     }
 
