@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-    @include('sushi.components.sushiCard--show')
+    @include('animal.components.animalCard--show')
 @endsection

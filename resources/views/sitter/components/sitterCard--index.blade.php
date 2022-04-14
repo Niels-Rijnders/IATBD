@@ -9,7 +9,7 @@
             </figure>
   
             <section class="gridCard__buttonSection u-flex-v-center">
-                <button class="sushiCard__button gridCard__button u-flex-v-center" onclick="/sitter/{{$sitter->id}}">Meer over {{$sitter->name}}</button>
+                <button class="animalCard__button gridCard__button u-flex-v-center" onclick="/sitter/{{$sitter->id}}">Meer over {{$sitter->name}}</button>
             </section>
 
             

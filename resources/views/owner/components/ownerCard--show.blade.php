@@ -12,8 +12,8 @@
         </section>
 
         <section class="showCard__buttonSection u-flex-v-center">
-            <button class="sushiCard__button showCard__button-pick u-flex-v-center" onclick="window.location.href='/owner/{{$owners->id}}/animals'">Dieren van {{$owners->name}} bekijken</button>
-            <button class="sushiCard__button showCard__button-back u-flex-v-center" onclick="window.location.href='/owners'">Terug naar overzicht</button>
+            <button class="animalCard__button showCard__button-pick u-flex-v-center" onclick="window.location.href='/owner/{{$owners->id}}/animals'">Dieren van {{$owners->name}} bekijken</button>
+            <button class="animalCard__button showCard__button-back u-flex-v-center" onclick="window.location.href='/owners'">Terug naar overzicht</button>
         </section>
 
 </article>

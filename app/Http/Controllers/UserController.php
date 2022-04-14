@@ -25,7 +25,7 @@ class UserController extends Controller
 
     public function ownerAnimals($id){
         $animals = \App\Models\User::find($id)->myAnimals;
-        return view('sushi.ownerIndex', ['animals' => $animals]);
+        return view('animal.ownerIndex', ['animals' => $animals]);
     }
 
     public function sitterIndex(){

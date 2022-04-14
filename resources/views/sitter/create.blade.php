@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<button class="sushiCard__button" onclick="window.location.href='/'">  terug  </button>
+<button class="animalCard__button" onclick="window.location.href='/'">  terug  </button>
     <article class="create-form a-popup">
         <form class="create-form__form" action="/application" method='POST'>
             @csrf

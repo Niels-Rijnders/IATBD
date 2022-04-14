@@ -6,5 +6,5 @@
 @endsection
 
 @section('content')
-    @include('sushi.components.animal--destroy')
+    @include('animal.components.animal--destroy')
 @endsection

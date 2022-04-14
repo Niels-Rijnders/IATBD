@@ -6,23 +6,23 @@ use Illuminate\Http\Request;
 use Exception;
 use Auth;
 use DB;
-class SushiController extends Controller
+class AnimalController extends Controller
 {
     public function index(){
-        return view('sushi.index',[
+        return view('animal.index',[
             'animal' => \App\Models\Animal::all()
         ]);
     }
     
     public function show($id){
 
-        return view('sushi.show', [
+        return view('animal.show', [
             'animal' => \App\Models\Animal::find($id),
         ]);
     }
 
     public function create(){
-        return view('sushi.create', [
+        return view('animal.create', [
             'kind_of_animal' => \App\Models\KindOfAnimal::all(),
             'images' => \App\Models\Image::all(),
         ]);
@@ -43,7 +43,7 @@ class SushiController extends Controller
             return redirect('/');
         }
         catch(Exception $e){
-            return redirect('/sushi/create');
+            return redirect('/animal/create');
         }
     }
 
@@ -55,12 +55,12 @@ class SushiController extends Controller
             return redirect('/');
         }
         catch(Exception $e){
-            return redirect('/sushi/create');
+            return redirect('/animal/create');
         }
     }
 
     public function delete(){
-        return view('sushi.delete', [
+        return view('animal.delete', [
             'owner' => Auth::id(),
             'animal' => \App\Models\User::find(Auth::id())->myAnimals,
         ]);
@@ -73,13 +73,13 @@ class SushiController extends Controller
             return redirect('/');
         }
         catch(exception $e){
-            return redirect('/sushi/create');
+            return redirect('/animal/create');
         }
 
     }
 
     public function word_opgepast(){
         $animals = DB::table('animal')->where('word_opgepast', 0)->get();
-        return view('sushi.index', ['animal' => $animals]);
+        return view('animal.index', ['animal' => $animals]);
     }
 }

@@ -6,9 +6,9 @@ Dieren toevoegen
 @endsection
 
 @section('content')
-<button class="sushiCard__button" onclick="window.location.href='/'">  Terug  </button>
+<button class="animalCard__button" onclick="window.location.href='/'">  Terug  </button>
 <article class="create-form a-popup">
-    <form class="create-form__form" action="/sushi" method="POST">
+    <form class="create-form__form" action="/animal" method="POST">
         @csrf 
 
         <section class="create-form__section">

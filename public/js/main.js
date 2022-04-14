@@ -14,14 +14,14 @@ for (let i = 0; i < list_of_dieren.length; i++){
 checkbox_vogel.addEventListener('change', function(){
     if(checkbox_vogel.checked){
         for( let i = 0; i < list_of_dieren.length; i++){
-            if (list_of_dieren[i].dataset.kindOfSushi == 'Vogel'){
+            if (list_of_dieren[i].dataset.kindOfanimal == 'Vogel'){
                 list_of_dieren[i].style.display = '';
             }
         }
     }
     else{
         for( let i = 0; i < list_of_dieren.length; i++){
-            if (list_of_dieren[i].dataset.kindOfSushi == 'Vogel'){
+            if (list_of_dieren[i].dataset.kindOfanimal == 'Vogel'){
                 list_of_dieren[i].style.display = 'none';
             }
     }
@@ -30,14 +30,14 @@ checkbox_vogel.addEventListener('change', function(){
 checkbox_kat.addEventListener('change', function(){
     if(checkbox_kat.checked){
         for( let i = 0; i < list_of_dieren.length; i++){
-            if (list_of_dieren[i].dataset.kindOfSushi == 'Kat'){
+            if (list_of_dieren[i].dataset.kindOfanimal == 'Kat'){
                 list_of_dieren[i].style.display = '';
             }
         }
     }
     else{
         for( let i = 0; i < list_of_dieren.length; i++){
-            if (list_of_dieren[i].dataset.kindOfSushi == 'Kat'){
+            if (list_of_dieren[i].dataset.kindOfanimal == 'Kat'){
                 list_of_dieren[i].style.display = 'none';
             }
     }
@@ -46,14 +46,14 @@ checkbox_kat.addEventListener('change', function(){
 checkbox_hond.addEventListener('change', function(){
     if(checkbox_hond.checked){
         for( let i = 0; i < list_of_dieren.length; i++){
-            if (list_of_dieren[i].dataset.kindOfSushi == 'Hond'){
+            if (list_of_dieren[i].dataset.kindOfanimal == 'Hond'){
                 list_of_dieren[i].style.display = '';
             }
         }
     }
     else{
         for( let i = 0; i < list_of_dieren.length; i++){
-            if (list_of_dieren[i].dataset.kindOfSushi == 'Hond'){
+            if (list_of_dieren[i].dataset.kindOfanimal == 'Hond'){
                 list_of_dieren[i].style.display = 'none';
             }
     }

@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['auth','admin'])->group(function() {
-    Route::get('/sushi/create', [App\Http\Controllers\SushiController::class, 'create']);
-    Route::post('/sushi', [App\Http\Controllers\SushiController::class, 'store']);
+    Route::get('/animal/create', [App\Http\Controllers\AnimalController::class, 'create']);
+    Route::post('/animal', [App\Http\Controllers\AnimalController::class, 'store']);
 
     Route::get('/owners', [\App\Http\Controllers\UserController::class, 'ownerIndex'])->middleware(['auth']);
     Route::get('/owner/{id}', [\App\Http\Controllers\UserController::class, 'ownerShow']);
@@ -23,29 +23,29 @@ Route::middleware(['auth','admin'])->group(function() {
 });
 
 Route::middleware(['auth', 'banned'])->group(function(){
-    Route::get('/', [\App\Http\Controllers\SushiController::class,'index']);
+    Route::get('/', [\App\Http\Controllers\AnimalController::class,'index']);
 });
 
 Route::middleware(['auth', 'oppasser', 'banned'])->group(function(){
     Route::get('/sitters', [\App\Http\Controllers\UserController::class, 'sitterIndex']);
     Route::get('/sitter/{id}', [\App\Http\Controllers\UserController::class, 'sitterShow']);
-    Route::get('/sushi', [\App\Http\Controllers\SushiController::class,'word_opgepast']);
-    Route::get('/sushi/{id}', [\App\Http\Controllers\SushiController::class,'show']);
+    Route::get('/animal', [\App\Http\Controllers\AnimalController::class,'word_opgepast']);
+    Route::get('/animal/{id}', [\App\Http\Controllers\AnimalController::class,'show']);
     Route::get('/application', [\App\Http\Controllers\UserController::class, 'createApplication']);
     Route::post('/application', [\App\Http\Controllers\UserController::class, 'storeApplication']);
 });
 
 Route::middleware(['auth', 'eigenaar', 'banned'])->group(function(){
 
-    Route::get('/sushi', [\App\Http\Controllers\SushiController::class,'index'])->middleware(['auth']);
-    Route::get('/sushi/{id}', [\App\Http\Controllers\SushiController::class,'show']);
+    Route::get('/animal', [\App\Http\Controllers\AnimalController::class,'index'])->middleware(['auth']);
+    Route::get('/animal/{id}', [\App\Http\Controllers\AnimalController::class,'show']);
     Route::get('/owners', [\App\Http\Controllers\UserController::class, 'ownerIndex']);
     Route::get('/owner/{id}', [\App\Http\Controllers\UserController::class, 'ownerShow']);
     Route::get('/owner/{id}/animals', [\App\Http\Controllers\UserController::class, 'ownerAnimals']);
-    Route::get('/sushi/create', [App\Http\Controllers\SushiController::class, 'create']);
-    Route::post('/sushi', [App\Http\Controllers\SushiController::class, 'store']);
-    Route::get('/sushi/delete', [\App\Http\Controllers\SushiController::class, 'delete']);
-    Route::post('/owners', [\App\Http\Controllers\SushiController::class, 'destroy']);
+    Route::get('/animal/create', [App\Http\Controllers\AnimalController::class, 'create']);
+    Route::post('/animal', [App\Http\Controllers\AnimalController::class, 'store']);
+    Route::get('/animal/delete', [\App\Http\Controllers\AnimalController::class, 'delete']);
+    Route::post('/owners', [\App\Http\Controllers\AnimalController::class, 'destroy']);
     Route::get('/application/{id}', [\App\Http\Controllers\UserController::class, 'createAccept']);
     Route::post('/application/{id}', [\App\Http\Controllers\UserController::class, 'updateAccept']);
     Route::get('/review/{id}', [\App\Http\Controllers\UserController::class, 'createReview']);
@@ -53,9 +53,9 @@ Route::middleware(['auth', 'eigenaar', 'banned'])->group(function(){
 });
 
 // Route::middleware(['auth', 'eigenaar'])->group(function() {
-//     Route::get('/sushi', [\App\Http\Controllers\SushiController::class,'index'])->middleware(['auth']);
-//     Route::get('/sushi/{id}', [\App\Http\Controllers\SushiController::class,'show']);
-//     Route::get('/', [\App\Http\Controllers\SushiController::class,'index']);  
+//     Route::get('/animal', [\App\Http\Controllers\AnimalController::class,'index'])->middleware(['auth']);
+//     Route::get('/animal/{id}', [\App\Http\Controllers\AnimalController::class,'show']);
+//     Route::get('/', [\App\Http\Controllers\AnimalController::class,'index']);  
 // });
 
 Route::get('/dashboard', function () {
