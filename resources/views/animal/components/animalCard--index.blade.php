@@ -1,6 +1,7 @@
 <li class="a-popup u-list-style-none gridCard" data-kind-of-animal={{$animal->species}}>
     <a href="/animal/{{$animal->id}}">
         <article class="">
+            <div class="role" id="status">{{$animal->word_opgepast}}</div>
             <header class="gridCard__header u-flex-v-center">
                 <h2 class="gridCard__heading"> {{$animal->species}} {{$animal->name}} </h2>
             </header>
