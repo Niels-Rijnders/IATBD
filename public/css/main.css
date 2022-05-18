@@ -270,7 +270,7 @@ body{
     margin-top: 9vh;
     margin-left: 25vw;
     box-shadow: 0 0.5rem 2rem black;
-    height: 70vh;
+    height: auto;
     align-items: center;
     color: #eeeeee;
     border-radius: 25px;
