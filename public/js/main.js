@@ -9,7 +9,7 @@
     let eigenaar_knop = document.getElementById("Eigenaar");
     let oppasser_knop = document.getElementById("Oppasser");
     let oppasser_knop2 = document.getElementById("Oppasser2");
-    console.log(status);
+    //console.log(status);
 
     if(role == "Eigenaar"){
         oppasser_knop.style.display = "none";
@@ -34,16 +34,18 @@
     }
 
     checkbox_vogel.addEventListener('change', function(){
+        console.log(123);
         if(checkbox_vogel.checked){
+            console.log(list_of_dieren[0]);
             for( let i = 0; i < list_of_dieren.length; i++){
-                if (list_of_dieren[i].dataset.kindOfanimal == 'Vogel'){
+                if (list_of_dieren[i].dataset.kindOfAnimal == 'Vogel'){
                     list_of_dieren[i].style.display = '';
                 }
             }
         }
         else{
             for( let i = 0; i < list_of_dieren.length; i++){
-                if (list_of_dieren[i].dataset.kindOfanimal == 'Vogel'){
+                if (list_of_dieren[i].dataset.kindOfAnimal == 'Vogel'){
                     list_of_dieren[i].style.display = 'none';
                 }
         }
@@ -52,14 +54,14 @@
     checkbox_kat.addEventListener('change', function(){
         if(checkbox_kat.checked){
             for( let i = 0; i < list_of_dieren.length; i++){
-                if (list_of_dieren[i].dataset.kindOfanimal == 'Kat'){
+                if (list_of_dieren[i].dataset.kindOfAnimal == 'Kat'){
                     list_of_dieren[i].style.display = '';
                 }
             }
         }
         else{
             for( let i = 0; i < list_of_dieren.length; i++){
-                if (list_of_dieren[i].dataset.kindOfanimal == 'Kat'){
+                if (list_of_dieren[i].dataset.kindOfAnimal == 'Kat'){
                     list_of_dieren[i].style.display = 'none';
                 }
         }
@@ -68,14 +70,14 @@
     checkbox_hond.addEventListener('change', function(){
         if(checkbox_hond.checked){
             for( let i = 0; i < list_of_dieren.length; i++){
-                if (list_of_dieren[i].dataset.kindOfanimal == 'Hond'){
+                if (list_of_dieren[i].dataset.kindOfAnimal == 'Hond'){
                     list_of_dieren[i].style.display = '';
                 }
             }
         }
         else{
             for( let i = 0; i < list_of_dieren.length; i++){
-                if (list_of_dieren[i].dataset.kindOfanimal == 'Hond'){
+                if (list_of_dieren[i].dataset.kindOfAnimal == 'Hond'){
                     list_of_dieren[i].style.display = 'none';
                 }
         }
