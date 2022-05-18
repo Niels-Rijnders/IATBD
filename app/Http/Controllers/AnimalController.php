@@ -16,7 +16,6 @@ class AnimalController extends Controller
     }
     
     public function show($id){
-
         return view('animal.show', [
             'animal' => \App\Models\Animal::find($id),
             'role' => \App\Models\User::all()->where('id', Auth::id())->first()->role,
@@ -64,7 +63,7 @@ class AnimalController extends Controller
     public function delete(){
         return view('animal.delete', [
             'owner' => Auth::id(),
-            'animal' => \App\Models\User::find(Auth::id())->myAnimals,
+            'animals' => \App\Models\User::find(Auth::id())->myAnimals,
         ]);
     }
     

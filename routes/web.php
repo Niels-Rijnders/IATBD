@@ -38,13 +38,13 @@ Route::middleware(['auth', 'oppasser', 'banned'])->group(function(){
 Route::middleware(['auth', 'eigenaar', 'banned'])->group(function(){
 
     Route::get('/animal', [\App\Http\Controllers\AnimalController::class,'index'])->middleware(['auth']);
+    Route::get('/animals/delete', [\App\Http\Controllers\AnimalController::class, 'delete']);
     Route::get('/animal/{id}', [\App\Http\Controllers\AnimalController::class,'show']);
     Route::get('/owners', [\App\Http\Controllers\UserController::class, 'ownerIndex']);
     Route::get('/owner/{id}', [\App\Http\Controllers\UserController::class, 'ownerShow']);
     Route::get('/owner/{id}/animals', [\App\Http\Controllers\UserController::class, 'ownerAnimals']);
     Route::get('/animal/create', [App\Http\Controllers\AnimalController::class, 'create']);
     Route::post('/animal', [App\Http\Controllers\AnimalController::class, 'store']);
-    Route::get('/animal/delete', [\App\Http\Controllers\AnimalController::class, 'delete']);
     Route::post('/owners', [\App\Http\Controllers\AnimalController::class, 'destroy']);
     Route::get('/application/{id}', [\App\Http\Controllers\UserController::class, 'createAccept']);
     Route::post('/application/{id}', [\App\Http\Controllers\UserController::class, 'updateAccept']);
