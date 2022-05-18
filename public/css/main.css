@@ -267,8 +267,10 @@ body{
 .create-form{
     width: 40%;
     margin: 0 auto;
+    margin-top: 9vh;
+    margin-left: 25vw;
     box-shadow: 0 0.5rem 2rem black;
-    height: 170vh;
+    height: 70vh;
     align-items: center;
     color: #eeeeee;
     border-radius: 25px;
@@ -294,6 +296,8 @@ body{
 
 .create-form__form{
     width: 90%;
+    padding-left: 6vw;
+    padding-top: 15vh;
     margin: auto auto;
 }
 
