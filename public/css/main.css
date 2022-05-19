@@ -347,7 +347,21 @@ body{
 }
 
 .filter-section__wrapper{
+    width: 25%;
+    float: left;
     margin-bottom: 2rem;
+    margin-right: 0rem;
+    margin-left: 10rem;
+    margin-top: 5rem;
+    border-style: solid;
+    border-color:#6930C3;
+    background-color: #6930C3;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.filter-section__input{
+    
 }
 
 /* utility classes */

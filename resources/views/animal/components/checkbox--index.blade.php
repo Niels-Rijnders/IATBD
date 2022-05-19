@@ -11,6 +11,7 @@
 
     <section class="filter-section__wrapper">
         <label class="filter-section__label for="Hond>Hond </label>
-        <input class="filster-section__input" id="Hond" name="Hond" type="checkbox" />
+        <input class="filter-section__input" id="Hond" name="Hond" type="checkbox" />
     </section>
 </section>
+<br><br><br><br><br><br>
