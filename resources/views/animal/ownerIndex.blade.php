@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-@include('animal.components.filter--index')
+
 <button class="animalCard__button" onclick="window.location.href='/animal/create'">   Dier toevoegen  </button>
 <button class="animalCard__button" onclick="window.location.href='/animals/delete'">   Dier verwijderen  </button>
 <button class="animalCard__button" onclick="window.location.href='/'">  Alle dieren  </button>
