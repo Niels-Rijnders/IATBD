@@ -360,6 +360,10 @@ body{
     text-align: center;
 }
 
+.delete_naam{
+    color: white;
+}
+
 /* utility classes */
 .u-list-style-none{
     list-style: none;
